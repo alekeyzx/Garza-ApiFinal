@@ -3,7 +3,6 @@
   "info": {
       "title": "API",
       "version": "1.0.0",
-      "description": "API de Alejandro Garza Mendez, sirve para dar de alta usuarios, juegos y valorarlos"
-  }
- 
+      "description": "API de Alejandro Garza Mendez, proyecto para dar de alta juegos y puntuarlos."
+  } 
 }

@@ -107,7 +107,7 @@ const validarSesion = (req, res, next) => {
  *             genero:
  *               type: string
  *             lanzamiento:
- *               type: integer
+ *               type: date
  *     responses:
  *       201:
  *         description: Juego agregado exitosamente
