@@ -24,7 +24,7 @@ export const agregarJuego = async (req, res) => {
 export const eliminarJuego = async (req, res) => {
   try {
     const { idJuego } = req.body;
-      await pool.query('DELETE FROM juegos where idJuego = ?', [idJuego]);
+      await pool.query('DELETE FROM Juegos where idJuego = ?', [idJuego]);
       res.status(200).json({
         message: 'Juego eliminado exitosamente',
       });

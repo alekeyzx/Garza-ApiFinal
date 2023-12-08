@@ -16,7 +16,7 @@ export const createUser = async (req, res) => {
       const { nombre, correo, contraseña } = req.body;
 
       // Verificar si el usuario ya existe utilizando el procedimiento almacenado
-      const [existingUser] = await pool.query("select * from usuarios where correo = ?", [
+      const [existingUser] = await pool.query("select * from Usuarios where correo = ?", [
         correo,
       ]);
 
@@ -60,7 +60,7 @@ export const loginUser = async (req, res) => {
 
     // Verificar las credenciales utilizando el procedimiento almacenado
     
-    const [existingUser] = await pool.query("SELECT * from usuarios where correo = ?", [
+    const [existingUser] = await pool.query("SELECT * from Usuarios where correo = ?", [
       correo
     ]);
 
