@@ -85,7 +85,7 @@ const validarSesion = (req, res, next) => {
 /**
  * @swagger
  * /valoraciones/valorar-juego:
- *   post:
+ *   put:
  *     summary: Calificar un juego
  *     description: Califica un juego y guarda la puntuación y el comentario del usuario.
  *     tags:
@@ -116,7 +116,7 @@ const validarSesion = (req, res, next) => {
 /**
  * @swagger
  * /valoraciones/valorar-juego:
- *   put:
+ *   get:
  *     summary: Obtener puntuaciones por juego
  *     description: Obtiene las puntuaciones y comentarios de un juego específico.
  *     tags:
@@ -154,8 +154,8 @@ const validarSesion = (req, res, next) => {
  */
 
 
-router.post('/valorar-juego', validarSesion, validateToken,  calificarJuego);
-router.put('/valorar-juego', validarSesion,  obtenerPuntuacionesPorJuego);
+router.put('/valorar-juego', validarSesion, validateToken,  calificarJuego);
+router.get('/valorar-juego', validarSesion,  obtenerPuntuacionesPorJuego);
 
 
 export default router;

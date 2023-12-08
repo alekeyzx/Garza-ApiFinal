@@ -36,11 +36,6 @@ export const obtenerPuntuacionesPorJuego = async (req, res) => {
       // Llama al procedimiento almacenado para obtener las puntuaciones por juego
       const [result] = await pool.query('CALL ObtenerPuntuacionesPorJuego(?)', [idJuego]);
       console.log(result)
-      const juegoNombre = result[0][0].juegoNombre; // Nombre del juego
-  
-      // Puntuaciones del juego con nombres de usuario y comentarios
-      const puntuaciones = result[1];
-  
       res.status(200).json({
         result
       });
