@@ -111,7 +111,7 @@ export const loginUser = async (req, res) => {
 export const adminUser = async (req,res) =>{
   try {
     const { idUsuario } = req.body;
-      await pool.query('CALL adminUser = ?', [idUsuario]);
+      await pool.query('CALL adminUser (?)', [idUsuario]);
       res.status(200).json({
         message: 'Usuario actualizado correctamente',
       });
