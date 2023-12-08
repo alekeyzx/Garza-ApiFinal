@@ -43,7 +43,7 @@ const swaggerOptions = {
     }
   ],
   apis: [
-    path.join(__dirname, "./app.js"),
+
     path.join(__dirname, "./routes/users.routes.js"),
     path.join(__dirname, "./routes/juegos.routes.js"),
     path.join(__dirname, "./routes/valoraciones.routes.js"),
@@ -63,20 +63,12 @@ app.use(
   })
 );
 
-/**
- * @swagger
- * /:
- *   get:
- *     summary: Ruta de bienvenida base.
- *     description: retorna la info de la api.
- *     responses:
- *       200:
- *         description: retorna la info de la api.
- */
+
 
 app.get("/", async (req, res) => {
   res.json(swaggerDocs);
 });
+
 
 app.use("/users", user);
 
