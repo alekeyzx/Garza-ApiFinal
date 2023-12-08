@@ -45,7 +45,7 @@ const validarSesion = (req, res, next) => {
 
 /**
  * @swagger
- * /user/create:
+ * /users/create:
  *   post:
  *     summary: Crear un nuevo usuario
  *     description: Crea un nuevo usuario en el sistema.
@@ -87,7 +87,7 @@ const validarSesion = (req, res, next) => {
 
 /**
  * @swagger
- * /user/login:
+ * /users/login:
  *   get:
  *     summary: Iniciar sesión
  *     description: Inicia sesión en el sistema.
@@ -134,7 +134,7 @@ const validarSesion = (req, res, next) => {
 
 /**
  * @swagger
- * /user/logout:
+ * /users/logout:
  *   get:
  *     summary: Cerrar sesión
  *     description: Cierra la sesión actual del usuario.
@@ -151,7 +151,7 @@ const validarSesion = (req, res, next) => {
 
 /**
  * @swagger
- * /user/admin:
+ * /users/admin:
  *   put:
  *     summary: Asignar rol de administrador a un usuario.
  *     description: Permite asignar el rol de administrador a un usuario existente.
